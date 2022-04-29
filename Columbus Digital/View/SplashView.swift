@@ -9,8 +9,14 @@ import SwiftUI
 
 struct SplashView: View {
     var body: some View {
-        Text("Awesome Splash Screen!")
-            .font(Font.largeTitle)
+        ZStack{
+            Color("BlueDark")
+                .edgesIgnoringSafeArea(.all)
+            VStack{
+                LottieView(name: "ContactsBook", loopMode: .loop)
+            }
+        }
+        
     }
 }
 
