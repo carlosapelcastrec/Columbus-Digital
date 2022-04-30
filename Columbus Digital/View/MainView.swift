@@ -9,7 +9,40 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            ZStack{
+                Color("Background")
+                    .edgesIgnoringSafeArea(.all)
+                VStack{
+                    Text("Agenda de Contactos")
+                        .font(.custom("The-Californication", size: 40))
+                        .foregroundColor(Color("Text"))
+                        .padding()
+                    NavigationLink(destination: AddContactView()){
+                        Text("Agregar Contacto")
+                            .font(.custom("KGPrimaryItalics", size: 25))
+                            .foregroundColor(Color("Text"))
+                            .padding()
+                            .frame(width:UIScreen.main.bounds.width/1.5, height: UIScreen.main.bounds.height/6)
+                            .background(BlurView(style: .regular))
+                            .cornerRadius(15)
+                            
+                    }
+                    .padding()
+                    
+                    NavigationLink(destination: ContactListView()){
+                        Text("Lista de Contactos")
+                            .font(.custom("KGPrimaryItalics", size: 25))
+                            .foregroundColor(Color("Text"))
+                            .padding()
+                            .frame(width:UIScreen.main.bounds.width/1.5, height: UIScreen.main.bounds.height/6)
+                            .background(BlurView(style: .regular))
+                            .cornerRadius(15)
+                    }
+                    .padding()
+                }
+            }
+        }
     }
 }
 

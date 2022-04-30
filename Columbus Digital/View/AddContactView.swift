@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct AddContactView: View {
+    @State var name : String = ""
+    @State var phoneNumber : String = ""
+    @State var email: String = ""
+    @State var address : String = ""
+    @State var notes : String = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Agregar Contacto")
     }
 }
 
