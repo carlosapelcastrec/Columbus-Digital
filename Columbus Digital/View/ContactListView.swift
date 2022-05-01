@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct ContactListView: View {
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Contact.name, ascending: true)],
+        animation: .default)
+    private var items: FetchedResults<Contact>
+    private var ContactVM = ContactViewModel()
+    @Environment(\.managedObjectContext) var viewContext
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(items) { item in
+                NavigationLink {
+                    Text("Item at \(item.name!)")
+                } label: {
+                    Text(item.name!)
+                }
+            }
+            .onDelete { indexSet in
+                ContactVM.deleteItems(offsets: indexSet, viewContext: viewContext, contacts: items)
+            }
+        }
     }
 }
 

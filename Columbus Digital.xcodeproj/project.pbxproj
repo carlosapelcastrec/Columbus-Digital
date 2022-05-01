@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		072D046A281EFEC50084BE58 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072D0469281EFEC50084BE58 /* BlurView.swift */; };
+		072D046F281EFF6B0084BE58 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072D046E281EFF6B0084BE58 /* CustomTextField.swift */; };
+		072D0477281F06C00084BE58 /* KGPrimaryItalics.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 072D0475281F06C00084BE58 /* KGPrimaryItalics.ttf */; };
+		072D0478281F06C00084BE58 /* The-Californication.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 072D0476281F06C00084BE58 /* The-Californication.ttf */; };
+		072D047C281F0F8E0084BE58 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072D047B281F0F8E0084BE58 /* ContactModel.swift */; };
+		072D047F281F10FF0084BE58 /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072D047E281F10FF0084BE58 /* ContactViewModel.swift */; };
 		07AFBD5F281B69C600D71D91 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AFBD5E281B69C600D71D91 /* LottieView.swift */; };
 		07AFBD61281B6A0300D71D91 /* ContactsBook.json in Resources */ = {isa = PBXBuildFile; fileRef = 07AFBD60281B6A0300D71D91 /* ContactsBook.json */; };
 		07FDBBF0281A367B00377CAF /* Columbus_DigitalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FDBBEF281A367B00377CAF /* Columbus_DigitalApp.swift */; };
@@ -48,6 +54,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		072D0469281EFEC50084BE58 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		072D046E281EFF6B0084BE58 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		072D0475281F06C00084BE58 /* KGPrimaryItalics.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KGPrimaryItalics.ttf; sourceTree = "<group>"; };
+		072D0476281F06C00084BE58 /* The-Californication.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "The-Californication.ttf"; sourceTree = "<group>"; };
+		072D0479281F07130084BE58 /* Columbus-Digital-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Columbus-Digital-Info.plist"; sourceTree = SOURCE_ROOT; };
+		072D047B281F0F8E0084BE58 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
+		072D047E281F10FF0084BE58 /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
 		07AFBD5E281B69C600D71D91 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		07AFBD60281B6A0300D71D91 /* ContactsBook.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ContactsBook.json; sourceTree = "<group>"; };
 		07FDBBEC281A367B00377CAF /* Columbus Digital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Columbus Digital.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +121,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		072D0468281EFEA30084BE58 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				072D0469281EFEC50084BE58 /* BlurView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		072D046B281EFED20084BE58 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				072D046E281EFF6B0084BE58 /* CustomTextField.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		072D0470281F06810084BE58 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				072D0475281F06C00084BE58 /* KGPrimaryItalics.ttf */,
+				072D0476281F06C00084BE58 /* The-Californication.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		072D047A281F07710084BE58 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				072D0470281F06810084BE58 /* Font */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		072D047D281F10080084BE58 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				07FDBBF8281A367D00377CAF /* Persistence.swift */,
+				072D047E281F10FF0084BE58 /* ContactViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		07FDBBE3281A367B00377CAF = {
 			isa = PBXGroup;
 			children = (
@@ -133,11 +188,12 @@
 		07FDBBEE281A367B00377CAF /* Columbus Digital */ = {
 			isa = PBXGroup;
 			children = (
+				072D0479281F07130084BE58 /* Columbus-Digital-Info.plist */,
 				07FDBBEF281A367B00377CAF /* Columbus_DigitalApp.swift */,
 				07FDBBF1281A367B00377CAF /* ContentViewOne.swift */,
-				07FDBBF8281A367D00377CAF /* Persistence.swift */,
 				07FDBC2D281B680200377CAF /* Model */,
 				07FDBC20281B5E9D00377CAF /* View */,
+				072D047D281F10080084BE58 /* ViewModel */,
 				07FDBBF3281A367D00377CAF /* Assets.xcassets */,
 				07FDBBF5281A367D00377CAF /* Preview Content */,
 			);
@@ -172,6 +228,9 @@
 		07FDBC20281B5E9D00377CAF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				072D047A281F07710084BE58 /* UI */,
+				072D046B281EFED20084BE58 /* Custom */,
+				072D0468281EFEA30084BE58 /* Component */,
 				07FDBC2E281B681700377CAF /* Lottie */,
 				07FDBC1E281B5E4700377CAF /* MainView.swift */,
 				07FDBC21281B5EBA00377CAF /* AddContactView.swift */,
@@ -188,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				07FDBBFA281A367D00377CAF /* Columbus_Digital.xcdatamodeld */,
+				072D047B281F0F8E0084BE58 /* ContactModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -336,6 +396,8 @@
 				07AFBD61281B6A0300D71D91 /* ContactsBook.json in Resources */,
 				07FDBBF7281A367D00377CAF /* Preview Assets.xcassets in Resources */,
 				07FDBBF4281A367D00377CAF /* Assets.xcassets in Resources */,
+				072D0478281F06C00084BE58 /* The-Californication.ttf in Resources */,
+				072D0477281F06C00084BE58 /* KGPrimaryItalics.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				072D046F281EFF6B0084BE58 /* CustomTextField.swift in Sources */,
 				07FDBBFC281A367D00377CAF /* Columbus_Digital.xcdatamodeld in Sources */,
 				07FDBC2C281B652F00377CAF /* SplashView.swift in Sources */,
 				07FDBBF9281A367D00377CAF /* Persistence.swift in Sources */,
@@ -471,8 +534,11 @@
 				07FDBC22281B5EBA00377CAF /* AddContactView.swift in Sources */,
 				07FDBC26281B5F0000377CAF /* ContactInformationView.swift in Sources */,
 				07FDBC2A281B64D900377CAF /* ContentView.swift in Sources */,
+				072D047F281F10FF0084BE58 /* ContactViewModel.swift in Sources */,
 				07FDBC1F281B5E4700377CAF /* MainView.swift in Sources */,
+				072D046A281EFEC50084BE58 /* BlurView.swift in Sources */,
 				07FDBC24281B5ED500377CAF /* ContactListView.swift in Sources */,
+				072D047C281F0F8E0084BE58 /* ContactModel.swift in Sources */,
 				07FDBBF0281A367B00377CAF /* Columbus_DigitalApp.swift in Sources */,
 				07AFBD5F281B69C600D71D91 /* LottieView.swift in Sources */,
 			);
@@ -638,9 +704,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Columbus Digital/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Columbus-Digital-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -652,7 +720,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -667,9 +735,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Columbus Digital/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Columbus-Digital-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -681,7 +751,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
