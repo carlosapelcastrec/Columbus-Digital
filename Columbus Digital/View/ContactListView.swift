@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContactListView: View {
+    @Environment(\.presentationMode) var presentationMode
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Contact.name, ascending: true)],
         animation: .default)
@@ -16,18 +17,53 @@ struct ContactListView: View {
     @Environment(\.managedObjectContext) var viewContext
     
     var body: some View {
-        List {
-            ForEach(items) { item in
-                NavigationLink {
-                    Text("Item at \(item.name!)")
-                } label: {
-                    Text(item.name!)
+        ZStack{
+            Color("Background")
+                .edgesIgnoringSafeArea(.all)
+            VStack{
+                Button(action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                }) {
+                    HStack {
+                        Image(systemName: "arrow.left.circle")
+                            .foregroundColor(Color("Text"))
+                            .font(.custom("KGPrimaryItalics", size: 30))
+                    }
+                }
+                .padding()
+                .frame(maxWidth: .infinity, alignment: .leading)
+                Text("Lista de Contactos")
+                    .foregroundColor(Color("Text"))
+                    .font(.custom("KGPrimaryItalics", size: 30))
+                List {
+                    ForEach(items) { contact in
+                        NavigationLink {
+                            ContactInformationView()
+                        } label: {
+                            VStack{
+                                Text(contact.name ?? "")
+                                    .foregroundColor(Color("Text"))
+                                    .font(.custom("KGPrimaryItalics", size:20))
+                                Text(contact.phoneNumber ?? "")
+                                    .foregroundColor(Color("Text"))
+                                    .font(.custom("KGPrimaryItalics", size: 20))
+                                
+                            }
+                        }
+                    }
+                    .onDelete { indexSet in
+                        ContactVM.deleteItems(offsets: indexSet, viewContext: viewContext, contacts: items)
+                    }
+                    .listRowBackground(BlurView(style: .regular))
+                }
+                .onAppear() {
+                    UITableView.appearance().backgroundColor = UIColor(named :"Background")
+                    UITableViewCell.appearance().backgroundColor = UIColor(named: "Background")
                 }
             }
-            .onDelete { indexSet in
-                ContactVM.deleteItems(offsets: indexSet, viewContext: viewContext, contacts: items)
-            }
         }
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 

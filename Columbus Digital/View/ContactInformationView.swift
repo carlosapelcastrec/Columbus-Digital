@@ -8,8 +8,24 @@
 import SwiftUI
 
 struct ContactInformationView: View {
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            VStack{
+                Button(action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                }) {
+                    HStack {
+                        Image(systemName: "arrow.left.circle")
+                            .foregroundColor(Color("Text"))
+                            .font(.custom("KGPrimaryItalics", size: 30))
+                    }
+                }
+                .padding()
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }
+        }
     }
 }
 
