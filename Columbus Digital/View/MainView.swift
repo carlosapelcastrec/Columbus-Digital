@@ -18,7 +18,7 @@ struct MainView: View {
                         .font(.custom("The-Californication", size: 40))
                         .foregroundColor(Color("Text"))
                         .padding()
-                    NavigationLink(destination: AddContactView()){
+                    NavigationLink(destination: AddContactView(contact: ContactModel(name: "", phoneNumber: "", email: "", address: "", notes: ""))){
                         Text("Agregar Contacto")
                             .font(.custom("KGPrimaryItalics", size: 25))
                             .foregroundColor(Color("Text"))

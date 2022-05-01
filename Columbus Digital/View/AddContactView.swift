@@ -8,15 +8,12 @@
 import SwiftUI
 
 struct AddContactView: View {
-    @State var name : String = ""
-    @State var phoneNumber : String = ""
-    @State var email: String = ""
-    @State var address : String = ""
-    @State var notes : String = ""
+    var ContactVM = ContactViewModel()
+    @State var contact : ContactModel
+    var isAddContact = true
     
     @Namespace var animation
     @Environment(\.presentationMode) var presentationMode
-    private var ContactVM = ContactViewModel()
     @Environment(\.managedObjectContext) var viewContext
     
     var body: some View {
@@ -36,27 +33,31 @@ struct AddContactView: View {
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .leading)
                 
-                Text("Agregar Contacto")
+                Text(isAddContact ? "Agregar Contacto" : "Actualizar Contacto")
                     .foregroundColor(Color("Text"))
                     .font(.custom("KGPrimaryItalics", size: 30))
                 
                 Spacer()
                 
-                CustomTextField(image: "person.circle", title: "Name", value: $name, animation: animation)
+                CustomTextField(image: "person.circle", title: "Name", value: $contact.name, animation: animation)
                 
-                CustomTextField(image: "phone.circle", title: "Phone Number", value: $phoneNumber, animation: animation)
+                CustomTextField(image: "phone.circle", title: "Phone Number", value: $contact.phoneNumber, animation: animation)
                 
-                CustomTextField(image: "envelope.circle", title: "Email", value: $email, animation: animation)
+                CustomTextField(image: "envelope.circle", title: "Email", value: $contact.email, animation: animation)
                 
-                CustomTextField(image: "mappin.circle", title: "Address", value: $address, animation: animation)
+                CustomTextField(image: "mappin.circle", title: "Address", value: $contact.address, animation: animation)
                 
-                CustomTextField(image: "doc.circle", title: "Notes", value: $notes, animation: animation)
+                CustomTextField(image: "doc.circle", title: "Notes", value: $contact.notes, animation: animation)
                 Spacer()
                 
                 Button(action: {
-                    ContactVM.addContact(viewContext: viewContext, contact: ContactModel(name: name, phoneNumber: phoneNumber, email: email, address: address, notes: notes))
+                    if isAddContact{
+                        ContactVM.addContact(viewContext: viewContext, contact: ContactModel(name: contact.name, phoneNumber: contact.phoneNumber, email: contact.email, address: contact.address, notes: contact.notes))
+                    }else{
+                        ContactVM.updateContact(viewContext: viewContext, contact: ContactModel(name: contact.name, phoneNumber: contact.phoneNumber, email: contact.email, address: contact.address, notes: contact.notes))
+                    }                    
                 }){
-                    Text("Guardar Contacto")
+                    Text(isAddContact ? "Guardar Contacto" : "Actualizar Contacto")
                         .foregroundColor(Color("Text"))
                         .font(.custom("KGPrimaryItalics", size: 20))
                         .padding()
@@ -75,6 +76,6 @@ struct AddContactView: View {
 struct AddContactView_Previews: PreviewProvider {
     @Namespace static var animation
     static var previews: some View {
-        AddContactView()
+        AddContactView(contact: ContactModel(name: "", phoneNumber: "", email: "", address: "", notes: ""))
     }
 }

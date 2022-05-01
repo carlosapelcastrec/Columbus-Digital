@@ -38,7 +38,7 @@ struct ContactListView: View {
                 List {
                     ForEach(items) { contact in
                         NavigationLink {
-                            ContactInformationView()
+                            ContactInformationView(contact: ContactModel(name: contact.name ?? "", phoneNumber: contact.phoneNumber ?? "", email: contact.email ?? "", address: contact.address ?? "", notes: contact.notes ?? ""))
                         } label: {
                             VStack{
                                 Text(contact.name ?? "")
