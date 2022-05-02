@@ -32,8 +32,42 @@ struct ContactInformationView: View {
                             .foregroundColor(Color("Text"))
                             .font(.custom("KGPrimaryItalics", size: 20))
                     }
-                }.padding()               
+                }
+                .padding()
+                Spacer()
+                
+                VStack{
+                    Image(systemName: "person.circle")
+                        .foregroundColor(Color("Text"))
+                        .font(.custom("KGPrimaryItalics", size:50))
+                        .padding()
+                    Text(contact.name)
+                        .foregroundColor(Color("Text"))
+                        .font(.custom("KGPrimaryItalics", size:20))
+                        .padding()
+                    Text(contact.phoneNumber)
+                        .foregroundColor(Color("Text"))
+                        .font(.custom("KGPrimaryItalics", size:20))
+                        .padding()
+                    Text(contact.email)
+                        .foregroundColor(Color("Text"))
+                        .font(.custom("KGPrimaryItalics", size:20))
+                        .padding()
+                    Text(contact.address)
+                        .foregroundColor(Color("Text"))
+                        .font(.custom("KGPrimaryItalics", size:20))
+                        .padding()
+                    Text(contact.notes)
+                        .foregroundColor(Color("Text"))
+                        .font(.custom("KGPrimaryItalics", size:20))
+                        .padding()
+                }
+                .frame(width: UIScreen.main.bounds.width/1.2)
+                .background(BlurView(style: .regular))
+                .cornerRadius(15)
+                Spacer()
             }
+           
         }
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)

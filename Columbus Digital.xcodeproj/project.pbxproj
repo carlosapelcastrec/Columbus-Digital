@@ -28,7 +28,6 @@
 		07FDBC22281B5EBA00377CAF /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FDBC21281B5EBA00377CAF /* AddContactView.swift */; };
 		07FDBC24281B5ED500377CAF /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FDBC23281B5ED500377CAF /* ContactListView.swift */; };
 		07FDBC26281B5F0000377CAF /* ContactInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FDBC25281B5F0000377CAF /* ContactInformationView.swift */; };
-		07FDBC28281B5FE100377CAF /* EditContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FDBC27281B5FE100377CAF /* EditContactView.swift */; };
 		07FDBC2A281B64D900377CAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FDBC29281B64D900377CAF /* ContentView.swift */; };
 		07FDBC2C281B652F00377CAF /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FDBC2B281B652F00377CAF /* SplashView.swift */; };
 		19458BD0041E02F4961DD80B /* Pods_Columbus_Digital_Columbus_DigitalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CFEB92A692594870C09A1FD /* Pods_Columbus_Digital_Columbus_DigitalUITests.framework */; };
@@ -79,7 +78,6 @@
 		07FDBC21281B5EBA00377CAF /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
 		07FDBC23281B5ED500377CAF /* ContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
 		07FDBC25281B5F0000377CAF /* ContactInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInformationView.swift; sourceTree = "<group>"; };
-		07FDBC27281B5FE100377CAF /* EditContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactView.swift; sourceTree = "<group>"; };
 		07FDBC29281B64D900377CAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		07FDBC2B281B652F00377CAF /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		3D9D01B30E21093827021D38 /* Pods-Columbus DigitalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Columbus DigitalTests.debug.xcconfig"; path = "Target Support Files/Pods-Columbus DigitalTests/Pods-Columbus DigitalTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -236,7 +234,6 @@
 				07FDBC21281B5EBA00377CAF /* AddContactView.swift */,
 				07FDBC23281B5ED500377CAF /* ContactListView.swift */,
 				07FDBC25281B5F0000377CAF /* ContactInformationView.swift */,
-				07FDBC27281B5FE100377CAF /* EditContactView.swift */,
 				07FDBC29281B64D900377CAF /* ContentView.swift */,
 				07FDBC2B281B652F00377CAF /* SplashView.swift */,
 			);
@@ -529,7 +526,6 @@
 				07FDBBFC281A367D00377CAF /* Columbus_Digital.xcdatamodeld in Sources */,
 				07FDBC2C281B652F00377CAF /* SplashView.swift in Sources */,
 				07FDBBF9281A367D00377CAF /* Persistence.swift in Sources */,
-				07FDBC28281B5FE100377CAF /* EditContactView.swift in Sources */,
 				07FDBBF2281A367B00377CAF /* ContentViewOne.swift in Sources */,
 				07FDBC22281B5EBA00377CAF /* AddContactView.swift in Sources */,
 				07FDBC26281B5F0000377CAF /* ContactInformationView.swift in Sources */,
