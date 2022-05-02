@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddContactView: View {
-    var ContactVM = ContactViewModel()
+    @ObservedObject var ContactVM = ContactViewModel()
     @State var contact : ContactModel
     var isAddContact = true
     
@@ -53,9 +53,11 @@ struct AddContactView: View {
                 Button(action: {
                     if isAddContact{
                         ContactVM.addContact(viewContext: viewContext, contact: ContactModel(name: contact.name, phoneNumber: contact.phoneNumber, email: contact.email, address: contact.address, notes: contact.notes))
+                        contact = ContactModel(name: "", phoneNumber: "", email: "", address: "", notes: "")
                     }else{
                         ContactVM.updateContact(viewContext: viewContext, contact: ContactModel(name: contact.name, phoneNumber: contact.phoneNumber, email: contact.email, address: contact.address, notes: contact.notes))
-                    }                    
+                        
+                    }
                 }){
                     Text(isAddContact ? "Guardar Contacto" : "Actualizar Contacto")
                         .foregroundColor(Color("Text"))
@@ -66,6 +68,10 @@ struct AddContactView: View {
                 .cornerRadius(15)
                 .padding(.bottom,32)
                 
+            }
+            let type = ContactVM.alert.type
+            CustomAlert(show: $ContactVM.showAlert , titleText: ContactVM.alert.title, bodyText: ContactVM.alert.description, typeAlert: type, showAccept: type == .success ? true : false ,showClose: type == .failed ? true : false){
+                self.presentationMode.wrappedValue.dismiss()
             }
         }
         .navigationBarHidden(true)

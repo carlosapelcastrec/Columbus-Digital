@@ -9,7 +9,9 @@ import Foundation
 import CoreData
 import SwiftUI
 
-class ContactViewModel{
+class ContactViewModel : ObservableObject{
+    @Published var showAlert : Bool = false
+    var alert =  Alert(title: "", description: "", type: .failed)
     
     func addContact(viewContext: NSManagedObjectContext, contact : ContactModel) {
         let newContact = Contact(context: viewContext)
@@ -21,9 +23,12 @@ class ContactViewModel{
         
         do {
             try viewContext.save()
+            alert = Alert(title: "Guardado Exitosamente", description: "Se guardo el contacto exitosamente", type: .success)
+            showAlert = true
         } catch {
             let nsError = error as NSError
-            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            alert = Alert(title: "Ocurrio un error", description: " \(nsError.userInfo)", type: .failed)
+            showAlert = true
         }
     }
     
@@ -44,12 +49,17 @@ class ContactViewModel{
             objectUpdate.setValue(contact.notes, forKey: "notes")
             do {
                 try viewContext.save()
+                alert = Alert(title: "Actualización Exitosa", description: "Se actualizo el contacto exitosamente", type: .success)
+                showAlert = true
             }catch let error as NSError {
-                //labelStatus.text = error.localizedFailureReason
+                alert = Alert(title: "Ocurrio un error", description: " \(error.localizedFailureReason)", type: .failed)
+                showAlert = true
             }
         }
         catch let error as NSError {
-            //labelStatus.text = error.localizedFailureReason
+            alert = Alert(title: "Ocurrio un error", description: " \(error.localizedFailureReason)", type: .failed)
+            showAlert = true
+            
         }
     }
     
