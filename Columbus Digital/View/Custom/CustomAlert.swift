@@ -53,6 +53,7 @@ struct CustomAlert: View {
                         Button(action:{
                             withAnimation(){
                                actionAccept()
+                                show.toggle()
                             }
                         }){
                             Text("Aceptar")

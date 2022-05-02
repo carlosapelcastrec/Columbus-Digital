@@ -50,15 +50,15 @@ class ContactViewModel : ObservableObject{
             do {
                 try viewContext.save()
                 alert = Alert(title: "Actualización Exitosa", description: "Se actualizo el contacto exitosamente", type: .success)
-                showAlert = true
+                self.showAlert = true
             }catch let error as NSError {
                 alert = Alert(title: "Ocurrio un error", description: " \(error.localizedFailureReason)", type: .failed)
-                showAlert = true
+                self.showAlert = true
             }
         }
         catch let error as NSError {
             alert = Alert(title: "Ocurrio un error", description: " \(error.localizedFailureReason)", type: .failed)
-            showAlert = true
+            self.showAlert = true
             
         }
     }

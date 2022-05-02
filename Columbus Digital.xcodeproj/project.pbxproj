@@ -16,6 +16,7 @@
 		072D0481282028430084BE58 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072D0480282028430084BE58 /* CustomAlert.swift */; };
 		072D048428202A810084BE58 /* TypeAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072D048328202A810084BE58 /* TypeAlert.swift */; };
 		072D048628202FA40084BE58 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072D048528202FA40084BE58 /* Alert.swift */; };
+		072D048828203B460084BE58 /* ValidateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072D048728203B460084BE58 /* ValidateViewModel.swift */; };
 		07AFBD5F281B69C600D71D91 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AFBD5E281B69C600D71D91 /* LottieView.swift */; };
 		07AFBD61281B6A0300D71D91 /* ContactsBook.json in Resources */ = {isa = PBXBuildFile; fileRef = 07AFBD60281B6A0300D71D91 /* ContactsBook.json */; };
 		07FDBBF0281A367B00377CAF /* Columbus_DigitalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FDBBEF281A367B00377CAF /* Columbus_DigitalApp.swift */; };
@@ -66,6 +67,7 @@
 		072D0480282028430084BE58 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		072D048328202A810084BE58 /* TypeAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAlert.swift; sourceTree = "<group>"; };
 		072D048528202FA40084BE58 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		072D048728203B460084BE58 /* ValidateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateViewModel.swift; sourceTree = "<group>"; };
 		07AFBD5E281B69C600D71D91 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		07AFBD60281B6A0300D71D91 /* ContactsBook.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ContactsBook.json; sourceTree = "<group>"; };
 		07FDBBEC281A367B00377CAF /* Columbus Digital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Columbus Digital.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +166,7 @@
 			children = (
 				07FDBBF8281A367D00377CAF /* Persistence.swift */,
 				072D047E281F10FF0084BE58 /* ContactViewModel.swift */,
+				072D048728203B460084BE58 /* ValidateViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				072D048628202FA40084BE58 /* Alert.swift in Sources */,
 				072D046F281EFF6B0084BE58 /* CustomTextField.swift in Sources */,
 				07FDBBFC281A367D00377CAF /* Columbus_Digital.xcdatamodeld in Sources */,
+				072D048828203B460084BE58 /* ValidateViewModel.swift in Sources */,
 				07FDBC2C281B652F00377CAF /* SplashView.swift in Sources */,
 				07FDBBF9281A367D00377CAF /* Persistence.swift in Sources */,
 				07FDBBF2281A367B00377CAF /* ContentViewOne.swift in Sources */,
